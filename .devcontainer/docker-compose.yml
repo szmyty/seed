@@ -1,0 +1,13 @@
+# ======================================================================
+#  docker-compose.yml
+#  Defines the base services for the development environment.
+# ======================================================================
+services:
+  workspace:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - .:/workspace:cached
+    working_dir: /workspace
+    command: tail -f /dev/null

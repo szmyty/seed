@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Install Dependencies",
+        "type": "shell",
+        "command": "pnpm install",
+        "problemMatcher": []
+      },
+      {
+        "label": "Run Setup",
+        "type": "shell",
+        "command": "pnpm run setup",
+        "problemMatcher": []
+      },
+      {
+        "label": "Build",
+        "type": "shell",
+        "command": "pnpm run build",
+        "problemMatcher": []
+      },
+      {
+        "label": "Lint",
+        "type": "shell",
+        "command": "pnpm run lint",
+        "problemMatcher": []
+      }
+    ]
+  }
