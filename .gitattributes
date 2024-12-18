@@ -1,0 +1,182 @@
+# -----------------------------------------------------------------------------
+# .gitattributes
+# -----------------------------------------------------------------------------
+# Purpose:
+#   This file configures Git's handling of file attributes, such as line endings,
+#   binary/text classification, and language-specific settings for versioning.
+#
+# References:
+# - Git Attributes Documentation: https://git-scm.com/docs/gitattributes
+# - Git and Line Endings: https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#_line_endings
+#
+# Maintainers:
+# - Author: [Your Name]
+# - Contact: [Your Email or GitHub Profile]
+#
+# Notes:
+# - Modify this file as needed to accommodate new file types or project-specific
+#   configurations.
+# - Ensure consistency with your team's development environment and toolchains.
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# General Configuration
+# -----------------------------------------------------------------------------
+
+# Auto-detect
+## Handle line endings automatically for files detected as text.
+*                    text=auto eol=lf
+
+# -----------------------------------------------------------------------------
+# Source Code
+# -----------------------------------------------------------------------------
+
+*.bash               text eol=lf
+*.bat                text eol=crlf
+*.cmd                text eol=crlf
+*.coffee             text
+*.css                text diff=css
+*.htm                text diff=html
+*.html               text diff=html
+*.ini                text
+*.js                 text
+*.json               text
+*.jsx                text
+*.less               text
+*.php                text
+*.pl                 text
+*.ps1                text eol=crlf
+*.py                 text diff=python
+*.rb                 text diff=ruby
+*.sass               text
+*.scss               text diff=css
+*.sh                 text eol=lf
+*.sql                text
+*.ts                 text
+*.tsx                text
+*.xml                text
+*.xhtml              text diff=html
+*.java               text
+
+# Docker.
+Dockerfile           text
+
+# -----------------------------------------------------------------------------
+# Documentation
+# -----------------------------------------------------------------------------
+
+*.ipynb              text
+*.md                 text diff=markdown
+*.markdown           text diff=markdown
+*.txt                text
+AUTHORS              text
+CHANGELOG            text
+CONTRIBUTING         text
+LICENSE              text
+README*              text
+
+# -----------------------------------------------------------------------------
+# Templates
+# -----------------------------------------------------------------------------
+
+*.dot                text
+*.ejs                text
+*.erb                text
+*.hbs                text
+*.jade               text
+*.mustache           text
+*.njk                text
+*.phtml              text
+*.svelte             text
+*.tmpl               text
+*.tpl                text
+*.twig               text
+*.vue                text
+
+# -----------------------------------------------------------------------------
+# Configuration
+# -----------------------------------------------------------------------------
+
+.editorconfig        text
+.env                 text
+.gitattributes       text
+.gitconfig           text
+*.lock               text -diff
+package.json         text eol=lf
+package-lock.json    text -diff
+pnpm-lock.yaml       text eol=lf -diff
+*.toml               text
+*.yaml               text
+*.yml                text
+browserslist         text
+.shellcheckrc        text eol=lf
+.eslintrc            text
+.eslintrc.js         text
+
+# -----------------------------------------------------------------------------
+# Graphics
+# -----------------------------------------------------------------------------
+
+*.ai                 binary
+*.bmp                binary
+*.gif                binary
+*.ico                binary
+*.jpg                binary
+*.jpeg               binary
+*.png                binary
+*.svg                text
+# Uncomment to treat .svg files as binary:
+# *.svg                binary
+
+# -----------------------------------------------------------------------------
+# Audio/Video
+# -----------------------------------------------------------------------------
+
+*.mp3                binary
+*.wav                binary
+*.mp4                binary
+*.webm               binary
+*.avi                binary
+
+# -----------------------------------------------------------------------------
+# Archives
+# -----------------------------------------------------------------------------
+
+*.7z                 binary
+*.zip                binary
+*.tar                binary
+*.rar                binary
+*.gz                 binary
+
+# -----------------------------------------------------------------------------
+# Fonts
+# -----------------------------------------------------------------------------
+
+*.ttf                binary
+*.woff               binary
+*.woff2              binary
+
+# -----------------------------------------------------------------------------
+# SQL
+# -----------------------------------------------------------------------------
+
+*.sql linguist-detectable=true linguist-language=sql
+
+# -----------------------------------------------------------------------------
+# nvm/Dart
+# -----------------------------------------------------------------------------
+
+*.nvmrc              text eol=lf
+*.dart               text
+
+# -----------------------------------------------------------------------------
+# Windows-specific files
+# -----------------------------------------------------------------------------
+
+*.sln                text eol=crlf
+*.props              text eol=crlf
+*.vcxproj            text eol=crlf
+*.vcxproj.filters    text eol=crlf
+*.sln.tmpl           text eol=crlf
+*.props.tmpl         text eol=crlf
+*.vcxproj.tmpl       text eol=crlf
