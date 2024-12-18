@@ -1,2 +1,222 @@
+# -----------------------------------------------------------------------------
+# Universal .gitignore
+# -----------------------------------------------------------------------------
+# Purpose:
+#   This file is a universal .gitignore template tailored for various environments,
+#   languages, and tools. Customize as needed for your specific project.
+#
+# References:
+# - Git Documentation: https://git-scm.com/docs/gitignore
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# General
+# -----------------------------------------------------------------------------
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.stackdump
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# IDE-specific settings
 .history
+.idea/
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-snippets
+
+# Operating System
+.DS_Store
+Thumbs.db
+Desktop.ini
+.Trash-*
+.directory
+
+# -----------------------------------------------------------------------------
+# Development and Build Artifacts
+# -----------------------------------------------------------------------------
+
+# Dependency directories
+node_modules/
+bower_components/
+jspm_packages/
+web_modules/
+
+# Build output
+build/
+dist/
+target/
+out/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.docusaurus/
+.temp/
+
+# Temporary files
+*.tsbuildinfo
+*.rpt2_cache/
+*.rts2_cache_*/
+
+# Package manager artifacts (lock files retained)
+.npm/
+.pnpm/
+
+# -----------------------------------------------------------------------------
+# Testing and Coverage
+# -----------------------------------------------------------------------------
+
+# Coverage reports
+coverage/
+.nyc_output/
+*.lcov
+*.lcov.*
+
+# Testing files
+TestResult.xml
+*.VisualState.xml
+*.coverage
+*.coverage.*
+
+# -----------------------------------------------------------------------------
+# Language-Specific Ignores
+# -----------------------------------------------------------------------------
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+.eggs/
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.pytype/
+cython_debug/
+
+# Node.js
+*.tgz
+.node_repl_history
+.lock-wscript
+
+# Java
+*.class
+*.jar
+*.war
+
+# Swift/Xcode
+*.xcuserdata
+*.xcscmblueprint
+*.xcodeproj
+*.xcworkspace
+
+# C++/C#
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+
+# Go
+*.test
+*.out
+
+# Rust
+/target/
+*.rs.bk
+
+# -----------------------------------------------------------------------------
+# Documentation
+# -----------------------------------------------------------------------------
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Sphinx documentation
+docs/_build/
+
+# MkDocs
+/site
+
+# LaTeX
+*.aux
+*.log
+*.toc
+
+# -----------------------------------------------------------------------------
+# Configurations and Temporary Files
+# -----------------------------------------------------------------------------
+
+# Environment files
+.env.secret
+!.env
+!.env.example
+
+# Lockfiles (package manager lock files retained)
+.lock
+
+# Debugging tools
+*.seed
+*.pid
+*.pid.lock
+
+# REPL history
+*.repl_history
+
+# -----------------------------------------------------------------------------
+# CI/CD
+# -----------------------------------------------------------------------------
+
+# Logs and temp files
+pip-log.txt
+pip-delete-this-directory.txt
+*.log
+
+# Temporary build files
+temp/
+tmp/
+
+# -----------------------------------------------------------------------------
+# Miscellaneous
+# -----------------------------------------------------------------------------
+
+# Husky configuration
+**/.husky/*.bak
+**/.husky/*.log
+!**/.husky/
+!**/.husky/_/
+!**/.husky/_/husky.sh
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+.idea_modules/
+
+# JetBrains Rider
+*.sln.iml
+
+# -----------------------------------------------------------------------------
+# Exceptions
+# -----------------------------------------------------------------------------
+
+# Allow specific files in otherwise ignored directories
+!resources/os/linux/*
+
+# asdf (ASDF Version Manager) cache
 .asdf
