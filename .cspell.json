@@ -1,0 +1,134 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "languageSettings": [],
+    "files": ["**/*"],
+    "ignorePaths": [
+        "**/.git/**",
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/coverage/**",
+        "**/*.min.js",
+        "**/*.log",
+        "**/package-lock.json",
+        "**/*.lock",
+        "**/build/**",
+        "**/pnpm-lock.yaml",
+        "**/.venv/**",
+        "**/venv/**",
+        "**/temp/**",
+        "**/tmp/**",
+        "**/out/**",
+        "**/output/**",
+        "**/target/**",
+        "**/bin/**",
+        "**/*.drawio",
+        "**/*.svg",
+        "**/*.png",
+        "**/*.jpg",
+        "**/*.jpeg",
+        "**/*.gif",
+        "**/*.ico",
+        "**/*.webp",
+        "**/*.otf",
+        "**/*.ttf",
+        "**/*.woff",
+        "**/vscode-extension/**"
+    ],
+    "words": [
+        "cspell",
+        "eslint",
+        "typescript",
+        "nodejs",
+        "cli",
+        "middleware",
+        "frontend",
+        "backend",
+        "devops",
+        "json",
+        "yaml",
+        "api",
+        "uuid",
+        "linter",
+        "regex",
+        "webpack",
+        "babel",
+        "jest",
+        "html",
+        "css",
+        "scss",
+        "dotenv",
+        "nginx",
+        "http",
+        "https",
+        "mongodb",
+        "postgres",
+        "sqlite",
+        "mysql",
+        "venv",
+        ".venv",
+        "Szmyt"
+    ],
+    "ignoreWords": ["TODO", "FIXME", "NOTE"],
+    "dictionaries": ["softwareTerms", "html", "css", "node"],
+    "caseSensitive": false,
+    "allowCompoundWords": true,
+    "suggestionsTimeout": 5000,
+    "dictionaryDefinitions": [
+        {
+            "name": "softwareTerms",
+            "path": "./.dev/dictionaries/software-terms.dictionary",
+            "addWords": true,
+            "description": "Software terms and jargon"
+        },
+        {
+            "name": "backendTerms",
+            "path": "./.dev/dictionaries/backend-terms.dictionary",
+            "addWords": true,
+            "description": "Backend development terms"
+        },
+        {
+            "name": "frontendTerms",
+            "path": "./.dev/dictionaries/frontend-terms.dictionary",
+            "addWords": true,
+            "description": "Frontend development terms"
+        },
+        {
+            "name": "devopsTerms",
+            "path": "./.dev/dictionaries/devops-cloud-terms.dictionary",
+            "addWords": true,
+            "description": "DevOps and cloud computing terms"
+        },
+        {
+            "name": "programmingTerms",
+            "path": "./.dev/dictionaries/programming-terms.dictionary",
+            "addWords": true,
+            "description": "Programming terms and concepts"
+        }
+    ],
+    "overrides": [
+        {
+            "filename": "*.md",
+            "language": "en",
+            "words": ["markdown", "table", "syntax"]
+        },
+        {
+            "filename": "*.json",
+            "language": "en",
+            "ignoreWords": ["dependencies", "devDependencies", "scripts"]
+        },
+        {
+            "filename": "*.html",
+            "language": "en",
+            "dictionaries": ["html"]
+        },
+        {
+            "filename": "**/{*.hrr,*.crr}",
+            "languageId": "cpp"
+        },
+        {
+            "filename": "**/dutch/**/*.txt",
+            "language": "nl"
+        }
+    ]
+}
