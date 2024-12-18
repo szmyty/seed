@@ -1,0 +1,15 @@
+#!/bin/sh
+# 
+# build
+# chore
+# ci
+# docs
+# feat
+# fix
+# perf
+# refactor
+# revert
+# style
+# test
+#
+pnpm commitlint --edit "$1"

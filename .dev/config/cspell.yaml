@@ -1,0 +1,156 @@
+# @file: cspell.yaml
+# @description: Configuration file for CSpell (Code Spell Checker).
+# This file defines rules, language settings, and word lists to be used
+# by CSpell for detecting and ignoring spelling issues in the project.
+# It adheres to best practices and includes a set of commonly used words
+# in software projects to minimize false positives.
+
+# @docs: https://cspell.org/docs/
+
+# Version of the cspell configuration schema.
+version: "0.2"
+
+# Language settings
+language: "en" # Default language for spell checking
+languageSettings: [] # Additional language configurations can be added here
+
+# Default file globs to spell check
+files:
+  - "**/*" # Check all files in the project
+
+# Paths or globs to ignore
+ignorePaths:
+  - "**/.git/**"
+  - "**/node_modules/**"
+  - "**/dist/**"
+  - "**/coverage/**"
+  - "**/*.min.js"
+  - "**/*.log"
+  - "**/package-lock.json"
+  - "**/*.lock"
+  - "**/build/**"
+  - "**/pnpm-lock.yaml"
+  - "**/.venv/**"
+  - "**/venv/**"
+  - "**/temp/**"
+  - "**/tmp/**"
+  - "**/out/**"
+  - "**/output/**"
+  - "**/target/**"
+  - "**/bin/**"
+  - "**/*.drawio"
+  - "**/*.svg"
+  - "**/*.png"
+  - "**/*.jpg"
+  - "**/*.jpeg"
+  - "**/*.gif"
+  - "**/*.ico"
+  - "**/*.webp"
+  - "**/*.otf"
+  - "**/*.ttf"
+  - "**/*.woff"
+  - "**/vscode-extension/**"
+
+# Words or terms to always consider correct
+words:
+  - "cspell"
+  - "eslint"
+  - "typescript"
+  - "nodejs"
+  - "cli"
+  - "middleware"
+  - "frontend"
+  - "backend"
+  - "devops"
+  - "json"
+  - "yaml"
+  - "api"
+  - "uuid"
+  - "linter"
+  - "regex"
+  - "webpack"
+  - "babel"
+  - "jest"
+  - "html"
+  - "css"
+  - "scss"
+  - "dotenv"
+  - "nginx"
+  - "http"
+  - "https"
+  - "mongodb"
+  - "postgres"
+  - "sqlite"
+  - "mysql"
+  - "Szmyt"
+
+# Ignore certain words/phrases from spell checking
+ignoreWords:
+  - "TODO"
+  - "FIXME"
+  - "NOTE"
+
+# Custom dictionaries (if needed)
+dictionaries:
+  - softwareTerms
+  - html
+  - css
+  - node
+
+# Case sensitivity settings
+caseSensitive: false # Treat words as case-insensitive
+
+# Enable/disable compound word checking
+allowCompoundWords: true # Allow compound words like "frontend" or "backend"
+
+# Enable suggestions for corrections
+suggestionsTimeout: 5000 # Set timeout in milliseconds for generating suggestions
+
+# Dictionary definitions (custom dictionaries can be defined here)
+dictionaryDefinitions:
+  - name: softwareTerms
+    path: ../dictionaries/software-terms.dictionary
+    addWords: true
+    description: "Software terms and jargon"
+  - name: backendTerms
+    path: ../dictionaries/backend-terms.dictionary
+    addWords: true
+    description: "Backend development terms"
+  - name: frontendTerms
+    path: ../dictionaries/frontend-terms.dictionary
+    addWords: true
+    description: "Frontend development terms"
+  - name: devopsTerms
+    path: ../dictionaries/devops-cloud-terms.dictionary
+    addWords: true
+    description: "DevOps and cloud computing terms"
+  - name: programmingTerms
+    path: ../dictionaries/programming-terms.dictionary
+    addWords: true
+    description: "Programming terms and concepts"
+
+# Override settings for specific file types
+overrides:
+  - filename: "*.md"
+    language: "en"
+    words:
+      - "markdown"
+      - "table"
+      - "syntax"
+  - filename: "*.json"
+    language: "en"
+    ignoreWords:
+      - "dependencies"
+      - "devDependencies"
+      - "scripts"
+  - filename: "*.html"
+    language: "en"
+    dictionaries:
+      - html
+  # Force `*.hrr` and `*.crr` files to be treated as `cpp` files:
+  - filename: "**/{*.hrr,*.crr}"
+    languageId: cpp
+
+  # Force `dutch/**/*.txt` to be treated as Dutch (dictionary needs to be installed separately):
+  - filename: "**/dutch/**/*.txt"
+    language: nl
